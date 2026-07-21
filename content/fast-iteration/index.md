@@ -65,5 +65,5 @@ prefer out-of-the-box solutions for this article)
 
       2.3.2 `cabal build -j8 --semaphore
        --ghc-options=... --disable-optimizations` allocates 8 cores in
-       total, with better sharing of resources with GHC
-       <https://well-typed.com/blog/2023/08/reducing-haskell-parallel-build-times/>
+      total, with better sharing of resources with GHC
+      <https://well-typed.com/blog/2023/08/reducing-haskell-parallel-build-times/>

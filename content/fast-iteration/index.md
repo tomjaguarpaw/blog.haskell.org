@@ -44,12 +44,11 @@ stack ghci
 cabal repl
 ```
 
-A simple `ghci` workflow is to make some changes to the files in your
+For a simple `ghci` workflow, make some changes to the files in your
 project, then navigate to your `ghci` window and type `:reload` (or
-`:r` for short) so `ghci` type checks and compiles your changes.
-
-Do you feel like `:r` ought to be automated away? If so then check out
-`ghcid`!
+`:r` for short) so `ghci` type checks and compiles your changes,
+printing any errors or warnings from GHC.  Do you feel like `:r` ought
+to be automated away? If so then check out `ghcid`!
 
 ### `ghcid`
 

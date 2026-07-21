@@ -19,10 +19,30 @@ prefer out-of-the-box solutions for this article)
 
 ## `ghci`-based
 
-* `ghci` itself: type `:r`
+GHCi is GHC's interactive interpreter, executable name `ghci`, which
+comes bundled with every installation of GHC.  It is a REPL
+("[read-eval-print
+loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)")
+which means you can type expressions into it and it will run them,
+printing the result.  There are a variety of ways to use `ghci` for
+fast iteration.
 
-  Comes bundled with your GHC installation
+* `ghci` itself
 
+  You can invoke `ghci` with a collection of source paths to have
+  `ghci` compile and load those modules, for example:
+
+  ```
+  ghci src/Path/Module1.hs src/Path/Module2.hs
+  ```
+
+  or, perhaps more likely, use a `ghci` wrapper that comes with your
+  build tool, `cabal` or `stack`:
+
+  ```
+  stack ghci
+  cabal repl
+  ```
 
 * `ghcid`
 
@@ -43,7 +63,20 @@ prefer out-of-the-box solutions for this article)
 
   <https://github.com/atelier-hub/tricorder>
 
-## `cabal` based
+### References
+
+* <https://next.fpcomplete.com/blog/haskell-development-workflows-4-ways/>
+* <https://www.parsonsmatt.org/2018/05/19/ghcid_for_the_win.html>
+* <https://functor.tokyo/blog/2019-04-07-ghcid-for-web-app-dev>
+* <https://haskellweekly.news/episode/6.html>
+* <https://mercury.com/blog/announcing-ghciwatch>
+* <https://jeancharles.quillet.org/posts/2024-09-04-Haskell-dev-workflow-with-ghcid-and-neovim.html>
+* <https://www.well-typed.com/blog/2023/03/cabal-multi-unit/>
+* <https://discourse.haskell.org/t/cheaper-producing-a-program-with-less-developer-time/13225>
+* <https://ghc.gitlab.haskell.org/ghc/doc/users_guide/ghci.html>
+* <https://hackage.haskell.org/package/rapid/docs/Rapid.html>
+
+## `cabal`-based
 
 1. Update to recent `cabal` and GHC, ideally `cabal` 3.12+ and GHC
    9.8+.  This combination offers support for better parallelism using

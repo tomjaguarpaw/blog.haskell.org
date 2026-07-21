@@ -8,7 +8,7 @@ categories = ["Ecosystem"]
 tags = ["Practices", "Tooling"]
 +++
 
-## *Notes for while we're writing:
+## *Notes for while we're writing:*
 
 > In scope: tools and techniques to help speed type checking or
 > compilation of an existing Haskell codebase
@@ -36,8 +36,8 @@ You can invoke `ghci` with a collection of source paths.  Then
 ghci src/Path/Module1.hs src/Path/Module2.hs
 ```
 
-or, perhaps more likely, use a `ghci` wrapper that comes with your
-build tool, `cabal` or `stack`:
+or, perhaps more useful, use a `ghci` invocation wrapper that comes
+with your build tool, `cabal` or `stack`:
 
 ```
 stack ghci
@@ -48,7 +48,7 @@ A simple `ghci` workflow is to make some changes to the files in your
 project, then navigate to your `ghci` window and type `:reload` (or
 `:r` for short) so `ghci` type checks and compiles your changes.
 
-Do feel like `:r` ought to be automated away? If so then check out
+Do you feel like `:r` ought to be automated away? If so then check out
 `ghcid`!
 
 ### `ghcid`

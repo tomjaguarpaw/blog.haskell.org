@@ -52,18 +52,29 @@ prefer out-of-the-box solutions for this article)
 2. Consider an allocation of `cabal build`:
 
     2.1 Increase the allocation area for GHC itself. This can
-    dramatically increase compilation throughput: `cabal build
-    --ghc-options="+RTS -A128m -n2m -RTS"`, for example.
+    dramatically increase compilation throughput, for example:
 
-    2.2 Disable optimizations if you don't need them: `cabal build
-    --ghc-options="..." --disable-optimizations`
+    ```
+    cabal build --ghc-options="+RTS -A128m -n2m -RTS"
+    ```
 
-    2.3 Take advantage of parallelism with job sharing:
+    2.2 Disable optimizations if you don't need them:
 
-      2.3.1 `cabal build -j8 --ghc-options="" --disable-optimizations`
-      allocates 8 cores for compilation
+    ```
+    cabal build --disable-optimizations
+    ```
 
-      2.3.2 `cabal build -j8 --semaphore
-       --ghc-options=... --disable-optimizations` allocates 8 cores in
-      total, with better sharing of resources with GHC
-      <https://well-typed.com/blog/2023/08/reducing-haskell-parallel-build-times/>
+    2.3 Take advantage of parallelism with job sharing, for example to
+    allocate 8 cores for compilation:
+
+    ```
+    cabal build -j8 --disable-optimizations
+    ```
+
+    2.4 Parallelism and semaphore, for example to allocate 8 cores in
+    total, with better sharing of resources with GHC
+    <https://well-typed.com/blog/2023/08/reducing-haskell-parallel-build-times/>
+
+    ```
+    cabal build -j8 --semaphore --disable-optimizations
+    ```

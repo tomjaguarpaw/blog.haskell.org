@@ -54,9 +54,9 @@ to be automated away? If so then check out `ghcid`!
 
 `ghcid` is a wrapper around `ghci` that automates issuing `:reload`
 when any file in your project changes, so its workflow is easier than
-`ghci`'s: make some changes to the files in your project and then
-merely *look at* your `ghcid` window; the result of type check and
-compilation will appear automatically.
+that of `ghci`: make some changes to the files in your project and
+then merely *look at* your `ghcid` window; the result of type check
+and compilation will appear automatically.
 
 #### Automatically running tests
 

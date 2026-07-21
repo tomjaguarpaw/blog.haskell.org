@@ -27,51 +27,48 @@ which means you can type expressions into it and it will run them,
 printing the result.  There are a variety of ways to use `ghci` for
 fast iteration.
 
-* `ghci` itself
+### `ghci` itself
 
-  You can invoke `ghci` with a collection of source paths.  Then
-  `ghci` will compile and load those modules, for example:
+You can invoke `ghci` with a collection of source paths.  Then
+`ghci` will compile and load those modules, for example:
 
-  ```
-  ghci src/Path/Module1.hs src/Path/Module2.hs
-  ```
+```
+ghci src/Path/Module1.hs src/Path/Module2.hs
+```
 
-  or, perhaps more likely, use a `ghci` wrapper that comes with your
-  build tool, `cabal` or `stack`:
+or, perhaps more likely, use a `ghci` wrapper that comes with your
+build tool, `cabal` or `stack`:
 
-  ```
-  stack ghci
-  cabal repl
-  ```
+```
+stack ghci
+cabal repl
+```
 
+### `ghcid`
 
+`ghcid` is a normal executable package on Hackage, so you can
+install it with, for example `cabal install ghcid`
 
-* `ghcid`
-
-  `ghcid` is a normal executable package on Hackage, so you can
-  install it with, for example `cabal install ghcid`
-
-  eval comments - `-- $> execute this code`
+eval comments - `-- $> execute this code`
 
 
-  --test ':main' --warnings
+--test ':main' --warnings
 
+### `ghcid-check`
 
-* `ghcid-check`
+It's just a single `bash` script.  Download it from
+<https://github.com/tomjaguarpaw/ghcid-check/>
 
-  It's just a single `bash` script.  Download it from
-  <https://github.com/tomjaguarpaw/ghcid-check/>
+### `ghciwatch`
 
-* `ghciwatch`
+### Tricorder
 
-* Tricorder
+`tricorder` is a normal executable package on Hackage, so you can
+install it with, for example `cabal install tricorder`
 
-   `tricorder` is a normal executable package on Hackage, so you can
-   install it with, for example `cabal install tricorder`
+<https://github.com/atelier-hub/tricorder>
 
-  <https://github.com/atelier-hub/tricorder>
-
-### References
+#### References
 
 * <https://academy.fpblock.com/blog/2018/08/haskell-development-workflows-4-ways/>
 * <https://www.parsonsmatt.org/2018/05/19/ghcid_for_the_win.html>

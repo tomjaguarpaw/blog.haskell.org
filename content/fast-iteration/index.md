@@ -19,7 +19,7 @@ tags = ["Practices", "Tooling"]
 
 ## `ghci`-based
 
-GHCi is GHC's interactive interpreter, executable name `ghci`, which
+GHCi is GHC's interactive interpreter (executable name `ghci`) which
 comes bundled with every installation of GHC.  It is a REPL
 ("[read-eval-print
 loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)")
@@ -56,13 +56,38 @@ Do you feel like `:r` ought to be automated away? If so then check out
 `ghcid` is a wrapper around `ghci` that automates issuing `:reload`
 when any file in your project changes, so its workflow is easier than
 `ghci`'s: make some changces to the files in your project and then
-simply *look at* your `ghcid` window.  The result of type check and
+merely *look at* your `ghcid` window; the result of type check and
 compilation will appear automatically.
 
-eval comments - `-- $> execute this code`
+#### Automatically running tests
 
+`ghcid` also allows you to run tests (or indeed any code) when your
+source files change.  There are two ways you can do this:
 
---test ':main' --warnings
+1. Embed comments with expressions to be evaluated, for example add
+   this to a source file to evaluate `expr` after loading:
+
+   ```
+   -- $> expr
+   ```
+
+   Evaluating embedded comment expressions requires using the
+   `--allow-eval` flag.
+
+2. Pass an expression to run after the code is loaded successfully,
+   for example:
+
+   ```
+   ghcid --test myTestFun
+   ```
+
+  (by default the test expression will only run if the code is
+  warning-free.  To run even if there are warnings, also pass
+  `--warnings`.)
+
+For more information on these features, see the
+[Evaluation](https://github.com/ndmitchell/ghcid#evaluation) section
+of the `ghci` README.
 
 #### Installation
 

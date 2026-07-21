@@ -63,7 +63,7 @@ and compilation will appear automatically.
 `ghcid` also allows you to run tests (or indeed any code) when your
 source files change.  There are two ways to do this:
 
-1. Embed comments with expressions to be evaluated, for example add
+1. Embed comments with expressions to be evaluated. For example add
    this to a source file to evaluate `expr` after loading:
 
    ```

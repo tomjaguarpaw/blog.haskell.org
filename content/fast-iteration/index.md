@@ -80,9 +80,9 @@ source files change.  There are two ways to do this:
    ghcid --test myTestFun
    ```
 
-  (by default the test expression will only run if the code is
-  warning-free.  To run even if there are warnings, also pass
-  `--warnings`.)
+   (by default the test expression will only run if the code is
+   warning-free.  To run even if there are warnings, also pass
+   `--warnings`.)
 
 For more information on these features, see the
 [Evaluation](https://github.com/ndmitchell/ghcid#evaluation) section

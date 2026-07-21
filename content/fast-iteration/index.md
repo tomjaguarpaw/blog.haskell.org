@@ -8,14 +8,14 @@ categories = ["Ecosystem"]
 tags = ["Practices", "Tooling"]
 +++
 
-WIP notes:
+## *Notes for while we're writing:
 
-In scope: tools and techniques to help speed type checking or
-compilation of an exisitng Haskell codebase
-
-Out of scope: structuring a codebase to compile fast (unless Laurent
-think it's really easy to describe to how to do that an act on it. I
-prefer out-of-the-box solutions for this article)
+> In scope: tools and techniques to help speed type checking or
+> compilation of an existing Haskell codebase
+>
+> Out of scope: structuring a codebase to compile fast (unless Laurent
+> think it's really easy to describe to how to do that an act on it. I
+> prefer out-of-the-box solutions for this article)
 
 ## `ghci`-based
 
@@ -44,22 +44,35 @@ stack ghci
 cabal repl
 ```
 
+A simple `ghci` workflow is to make some changes to the files in your
+project, then navigate to your `ghci` window and type `:reload` (or
+`:r` for short) so `ghci` type checks and compiles your changes.
+
+Do feel like `:r` ought to be automated away? If so then check out
+`ghcid`!
+
 ### `ghcid`
 
-`ghcid` is a normal executable package on Hackage, so you can
-install it with, for example `cabal install ghcid`
+`ghcid` is a wrapper around `ghci` that automates issuing `:reload`
+when any file in your project changes so the workflow is easier than
+`ghci`: make some changces to the files in your project and then
+simply *look at* your `ghcid` window.  The result of type check and
+compilation will appear automatically.
 
 eval comments - `-- $> execute this code`
 
 
 --test ':main' --warnings
 
+#### Installation
+
+`ghcid` is a normal executable package on Hackage, so you can install
+it with, for example `cabal install ghcid`.
+
 ### `ghcid-check`
 
 It's just a single `bash` script.  Download it from
 <https://github.com/tomjaguarpaw/ghcid-check/>
-
-### `ghciwatch`
 
 ### Tricorder
 
@@ -67,6 +80,9 @@ It's just a single `bash` script.  Download it from
 install it with, for example `cabal install tricorder`
 
 <https://github.com/atelier-hub/tricorder>
+
+### `ghciwatch`
+
 
 #### References
 

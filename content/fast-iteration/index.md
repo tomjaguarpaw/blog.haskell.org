@@ -65,7 +65,7 @@ fast iteration.
 
 ### References
 
-* <https://next.fpcomplete.com/blog/haskell-development-workflows-4-ways/>
+* <https://academy.fpblock.com/blog/2018/08/haskell-development-workflows-4-ways/>
 * <https://www.parsonsmatt.org/2018/05/19/ghcid_for_the_win.html>
 * <https://functor.tokyo/blog/2019-04-07-ghcid-for-web-app-dev>
 * <https://haskellweekly.news/episode/6.html>

@@ -43,7 +43,7 @@ prefer out-of-the-box solutions for this article)
 
   <https://github.com/atelier-hub/tricorder>
 
-## `caabl` based
+## `cabal` based
 
 1. Update to recent `cabal` and GHC, ideally `cabal` 3.12+ and GHC
    9.8+.  This combination offers support for better parallelism using

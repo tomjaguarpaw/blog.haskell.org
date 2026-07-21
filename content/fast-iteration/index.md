@@ -73,8 +73,8 @@ source files change.  There are two ways to do this:
    (Evaluating embedded comment expressions requires using the
    `--allow-eval` flag.)
 
-2. Pass an expression to run after the code is loaded successfully,
-   for example:
+2. Pass an expression to the command line option `--test`, to run
+   after the code is loaded successfully, for example:
 
    ```
    ghcid --test myTestFun

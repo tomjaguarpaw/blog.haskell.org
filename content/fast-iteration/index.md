@@ -64,7 +64,7 @@ and compilation will appear automatically.
 source files change.  There are two ways to do this:
 
 1. Embed comments with expressions to be evaluated. For example add
-   this to a source file to evaluate `expr` after loading:
+   this comment to a source file to evaluate `expr` after loading:
 
    ```
    -- $> expr

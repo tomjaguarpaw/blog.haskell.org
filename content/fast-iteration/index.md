@@ -54,8 +54,8 @@ Do you feel like `:r` ought to be automated away? If so then check out
 ### `ghcid`
 
 `ghcid` is a wrapper around `ghci` that automates issuing `:reload`
-when any file in your project changes so the workflow is easier than
-`ghci`: make some changces to the files in your project and then
+when any file in your project changes, so its workflow is easier than
+`ghci`'s: make some changces to the files in your project and then
 simply *look at* your `ghcid` window.  The result of type check and
 compilation will appear automatically.
 
